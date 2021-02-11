@@ -3,6 +3,8 @@ import './App.css';
 import Accordion from './components/accordion/Acordion';
 import {Rating} from "./components/Rating/Rating";
 import OnOff from "./components/onOff/onOff";
+import UncontrolledAccordion from "./components/accordion/UncontrolledAccordion";
+import {UncontrolledRating} from "./components/Rating/uncontrolledRating";
 
 
 //! function declaration
@@ -19,9 +21,11 @@ function App() {
     console.log('rendering App')
     return (
         <div>
-            <OnOff on={false}/>
-            <OnOff on={true}/>
-            <OnOff on={false}/>
+            <OnOff/>
+            <OnOff/>
+            <UncontrolledAccordion titleValue={'Menu'}/>
+            <UncontrolledAccordion titleValue={'Users'}/>
+            <UncontrolledRating />
             {/*<PageTitle title={'Page title render`'}/>*/}
             {/*<Accordion titleValue={'Accordion title 1 '} collapsed={true}/>*/}
             {/*<Accordion titleValue={'Accordion title 2 '} collapsed={true}/>*/}
