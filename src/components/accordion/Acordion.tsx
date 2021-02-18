@@ -5,29 +5,28 @@ import React from "react";
 type AccordionPropsType = {
     titleValue: string,
     collapsed: boolean
-    setAccordionCollapsed:(value:boolean) => void
+    onChange:() => void
 }
 
 function Accordion(props: AccordionPropsType) {
 
     return (
         <div>
-            <AccordionTitle title={props.titleValue}        setAccordionCollapsed={props.setAccordionCollapsed} />
+            <AccordionTitle title={props.titleValue}
+                            onChange={props.onChange}
+                            />
             {!props.collapsed && <AccordionBody/>}
         </div>
     )
 }
 type AccordionTitlePropsType = {
     title: string
-    setAccordionCollapsed:(value:boolean) => void
+    onChange:() => void
 }
 function AccordionTitle(props: AccordionTitlePropsType) {
-    console.log('rendering AccTitle')
+    const toogle = () => {props.onChange()}
     return (
-        <h3 onClick={()=>{
-            props.setAccordionCollapsed(true)
-
-        }}>{props.title}
+        <h3 onClick={toogle}>{props.title}
         </h3>
     )
 }
