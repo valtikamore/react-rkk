@@ -31,44 +31,27 @@ function App() {
 
     return (
         <div className={'App'}>
-            <Rating value={ratingValue} clickOnStar={setRatingValue}/>
 
-            <Accordion
-                titleValue={'Accordion title 1 '}
-                collapsed={accordionCollapsed}
-                onChange={() => {
-                    setAccordionCollapsed(!accordionCollapsed)
-                }}/>
+            {/*<Rating value={ratingValue} clickOnStar={setRatingValue}/>*/}
+
+            {/*<Accordion*/}
+            {/*    titleValue={'Accordion title 1 '}*/}
+            {/*    collapsed={accordionCollapsed}*/}
+            {/*    onChange={() => {*/}
+            {/*        setAccordionCollapsed(!accordionCollapsed)*/}
+            {/*    }}/>*/}
+
             {/*<OnOff*/}
             {/*    on={on}*/}
-            {/*    onChange={(on)=>{setOn(on)}}/>*/}
-
-            <UncontrolledOnOff onChange={setOn}/> {on.toString()}
-
-            <UncontrolledAccordion titleValue={'bla'}/>
+            {/*    onChange={setOn}/>*/}
 
 
+            {/*<UncontrolledOnOff /> {on.toString()}*/}
 
-            {/*<UncontrolledOnOff*/}
-            {/*    on={on}*/}
-            {/*    setOn={setOn}/>*/}
+            {/*<UncontrolledAccordion titleValue={'bla'}/>*/}
 
-
-
-
-            {/*<UncontrolledAccordion titleValue={'Users'}/>*/}
             {/*<UncontrolledRating />*/}
 
-
-            {/*<PageTitle title={'Page title render`'}/>*/}
-
-            {/*<Accordion titleValue={'Accordion title 2 '} collapsed={true}/>*/}
-            {/*<Rating value={0}/>*/}
-            {/*<Rating value={1}/>*/}
-            {/*<Rating value={2}/>*/}
-            {/*<Rating value={3}/>*/}
-            {/*<Rating value={4}/>*/}
-            {/*<Rating value={5}/>*/}
         </div>
     )
 }

@@ -1,10 +1,8 @@
 import React, {useState} from "react";
 
 
-type UncontrolledOnOffPropsType = {
-    onChange:(on:boolean) => void
-}
-function UncontrolledOnOff(props:UncontrolledOnOffPropsType) {
+
+function UncontrolledOnOff() {
     const [on,setOn] = useState(true)
 
     let styles = {
@@ -36,12 +34,10 @@ function UncontrolledOnOff(props:UncontrolledOnOffPropsType) {
 
     const onClickedOn = () => {
         setOn(true)
-        props.onChange(true)
     }
 
     const onClickedOff = () => {
         setOn(false)
-        props.onChange(false)
     }
     return (
         <div style={styles}>
